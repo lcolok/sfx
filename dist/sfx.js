@@ -5,6 +5,7 @@ void (function () {
   var fileName, scripts = document.getElementsByTagName("script");
   fileName = scripts[scripts.length - 1].getAttribute("src");//获取当前运行的js的文件名
 
+
   if (this.sfx) {
     if (this.sfx.ver >= currentVer) {
       console.log(this.sfx.fileName + '已初始化，无需再加载');
@@ -26,7 +27,7 @@ void (function () {
       console.error('Oh man 😩! \nYour browser doesn\'t support audio awesomeness.');
       return function () { }; // return an empty function if `loudLinks` is called again.
     } else {
-      console.log('Audio works like a charm 👍');
+
     }
 
     // Create audio element and make it awesome
@@ -152,4 +153,11 @@ void (function () {
     },
 
   }
+
+  var src = document.currentScript.src;
+  console.log(src);//获取当前运行的js的路径
+
+  var scriptVersion = src.match(/\@([0-9]+\.*)*/gm);
+
+  console.log('已加载sfx,当前版本为' + scriptVersion);
 })();
