@@ -1,5 +1,6 @@
-void (function () {
- 
+
+function sfxInit() {
+
   var currentVer = '0.0.2';
 
   var fileName, scripts = document.getElementsByTagName("script");
@@ -125,37 +126,37 @@ void (function () {
   })(document);
 
 
-  this.sfx = {
-    ver: currentVer,
-    fileName: fileName,
-    play: function (input) {
-      var matchedURL = input.match(/(https?|ftp|file):\/\/[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]/gm);
-      if (matchedURL) {
-        this.playByURL(matchedURL);
-        return
-      }
-
-
-    },
-    playByURL: function (url_data) {
-      var con = new AudioContext();
-      var req = new XMLHttpRequest();
-      req.open('GET', url_data, true);
-      req.responseType = 'arraybuffer';
-      req.onload = function () {
-        con.decodeAudioData(req.response, function (buffer) {
-          var source = con.createBufferSource();
-          source.buffer = buffer;
-          source.connect(con.destination);
-          source.start(0);
-        }, function (e) {
-          console.info('错误');
-        });
-      }
-      req.send();
-    },
-
-  }
+  /*   this.sfx = {
+      ver: currentVer,
+      fileName: fileName,
+      play: function (input) {
+        var matchedURL = input.match(/(https?|ftp|file):\/\/[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]/gm);
+        if (matchedURL) {
+          this.playByURL(matchedURL);
+          return
+        }
+  
+  
+      },
+      playByURL: function (url_data) {
+        var con = new AudioContext();
+        var req = new XMLHttpRequest();
+        req.open('GET', url_data, true);
+        req.responseType = 'arraybuffer';
+        req.onload = function () {
+          con.decodeAudioData(req.response, function (buffer) {
+            var source = con.createBufferSource();
+            source.buffer = buffer;
+            source.connect(con.destination);
+            source.start(0);
+          }, function (e) {
+            console.info('错误');
+          });
+        }
+        req.send();
+      },
+  
+    } */
 
   var src = document.currentScript.src;
 
@@ -163,5 +164,6 @@ void (function () {
 
   console.log('已加载sfx,当前版本为' + scriptVersion);
 
-  
-})();
+
+}
+sfxInit();
