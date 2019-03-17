@@ -137,13 +137,13 @@ nav {
     margin: 0 0 2px;
     color: #fff;
     opacity: 0;
-    animation: fadeInAnimation .5s ease-in-out .2s forwards
+    animation: fadeInAnimation .1s ease-in-out .1s forwards
 }
 
 .secondary-heading {
     margin: 0 0 100px;
     opacity: 0;
-    animation: fadeInAnimation .5s ease-in-out .4s forwards
+    animation: fadeInAnimation .1s ease-in-out .1s forwards
 }
 
 .main-button {
@@ -153,8 +153,8 @@ nav {
     border-radius: 4px;
     cursor: pointer;
     outline: none;
-    -webkit-transition: all ease .2s;
-    transition: all ease .2s;
+    -webkit-transition: all ease .1s;
+    transition: all ease .1s;
     font-size: 24px;
     width: 50%
 }
@@ -170,7 +170,7 @@ nav {
     color: rgba(0, 0, 0, .9);
     font-weight: 400;
     opacity: 0;
-    animation: fadeInAnimation .5s ease-in-out .8s forwards
+    animation: fadeInAnimation .1s ease-in-out .1s forwards
 }
 
 .download-button:hover {
@@ -187,7 +187,7 @@ nav {
 .size-label {
     color: rgba(0, 0, 0, .6);
     opacity: 0;
-    animation: fadeInAnimation .5s ease-in-out 1s forwards
+    animation: fadeInAnimation .1s ease-in-out 1s forwards
 }
 
 .size-label:hover {
@@ -197,7 +197,7 @@ nav {
 .body-cont {
     margin: 50px 0 0;
     opacity: 0;
-    animation: fadeInAnimation .5s ease-in-out 1.5s forwards
+    animation: fadeInAnimation .1s ease-in-out 0.1s forwards
 }
 
 .text-desc {}

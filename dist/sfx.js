@@ -104,8 +104,8 @@ void (function () {
 
     // Go crazy! Scan all the links and see if they have the 'data-sound' Attribute and attach the events
     function loudlinks() {
-      var hoverLinks = document.getElementsByClassName('loud-link-hover'),
-        clickLinks = document.getElementsByClassName('loud-link-click'),
+      var hoverLinks = document.querySelectorAll('.loud-link-hover,.sfx-hover'),
+        clickLinks = document.querySelectorAll('.loud-link-click,.sfx-click'),
         hoverLength = hoverLinks.length,
         clickLength = clickLinks.length,
         i;
