@@ -157,7 +157,7 @@ void (function () {
   var src = document.currentScript.src;
   console.log(src);//获取当前运行的js的路径
 
-  var scriptVersion = src.match(/\@([0-9]+\.*)*/gm);
+  var scriptVersion = src.match(/(?<=\@)([0-9]+\.*)*/gm);
 
   console.log('已加载sfx,当前版本为' + scriptVersion);
 })();
