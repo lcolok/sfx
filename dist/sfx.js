@@ -1,5 +1,5 @@
 void (function () {
-
+ 
   var currentVer = '0.0.2';
 
   var fileName, scripts = document.getElementsByTagName("script");
@@ -81,7 +81,10 @@ void (function () {
       audioSource.setAttribute('src', audioSrc); // putting the mp3 sound link in the src Attribute of <source>
       audioPlayer.load();
 
-      audioPlayer.play();
+      var playPromise = audioPlayer.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => { audioPlayer.play(); })
+      }
     }
 
     // Stop audio
@@ -156,7 +159,9 @@ void (function () {
 
   var src = document.currentScript.src;
 
-  var scriptVersion = src.match(/(?<=\@)([0-9]+\.*)*/gm);
+  var scriptVersion = src.match(/\@([0-9]+\.*)*/gm);
 
   console.log('已加载sfx,当前版本为' + scriptVersion);
+
+  
 })();

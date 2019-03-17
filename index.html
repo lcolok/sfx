@@ -23,37 +23,33 @@
 
 	<div class="body-cont">
 		<div class="content-wrapper-small">
-			<p class="text-desc">
-				The library creates HTML5 audio element and uses it to play mp3/ogg audio files which is currently <a
-					class="loud-link-hover" data-src="woohoo" href="http://caniuse.com/#feat=audio"
-					target="_blank">supported</a> in all browsers.
-			</p>
+
 			<h2 class="section-heading" id="examples">Examples</h2>
 			<hr>
 			<div class="examples-cont">
 				<button class="main-button button-example sfx-hover"
-					src="https://uploader.shimo.im/f/YOwjiyzl4Kk0Dd5H.mp3?attname=Paste_Copy.mp3" name="button">经过我</button>
-				<button class="main-button button-example sfx-click"
-					src="https://uploader.shimo.im/f/YOwjiyzl4Kk0Dd5H.mp3?attname=Paste_Copy.mp3" name="button">点击我</button>
-				<button class="main-button button-example" name="button"
-					onclick="sfx.play('https://uploader.shimo.im/f/YOwjiyzl4Kk0Dd5H.mp3?attname=Paste_Copy.mp3')">通过URL直接播放</button>
+					src="https://uploader.shimo.im/f/YOwjiyzl4Kk0Dd5H.mp3?attname=Paste_Copy.mp3"
+					name="button">经过我</button>
+				<button class="main-button button-example loud-link-click sfx-click"
+					data-src="https://uploader.shimo.im/f/YOwjiyzl4Kk0Dd5H.mp3?attname=Paste_Copy.mp3"
+					name="button">点击我</button>
+
 				<button class="main-button button-example" name="button"
 					onclick="sfx.play('copy')">通过搜索库中的名字进行播放</button>
 
-				<figcaption class="picture-caption">It works on anything, even on cat gifs!</figcaption>
 			</div>
-			<hr>
+
 			<div class="done-cont">
 
-				<a class="main-button button-example loud-link-click" data-src="success" href="sfx.js" target="_blank"
-					onclick="">Download</a>
+
 				<hr>
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/gh/lcolok/sfx@0.0.4/dist/sfx.min.js"></script>
-	<script src="dist/sfx.js"></script>
-	<audio preload="true">
+
+
+	<script type="text/javascript" src="dist/sfx.js" ></script>
+
 
 
 </body>
